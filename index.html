@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+    <style>
+        #btn,#btn-remove {
+            background-color: #4CAF50; /* Green background */
+            border: none; /* Remove borders */
+            color: white; /* White text */
+            padding: 15px 32px; /* Some padding */
+            text-align: center; /* Centered text */
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Get it to display inline */
+            font-size: 16px; /* Increase font size */
+            margin: 4px 2px; /* Some margin */
+            cursor: pointer; /* Pointer/hand icon */
+            border-radius: 12px; /* Rounded corners */
+        }
+        
+        #btn:hover,#btn-remove:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    
+        p {
+            font-family: Arial, sans-serif; /* Font family */
+            font-size: 18px; /* Font size */
+            color: #333; /* Text color */
+            background-color: #f9f9f9; /* Background color */
+            padding: 10px; /* Padding */
+            border: 1px solid #ddd; /* Border */
+            border-radius: 8px; /* Rounded corners */
+            margin: 10px 0; /* Margin */
+            transition: background-color 0.3s ease; /* Smooth transition */
+            opacity: 0; /* Initially hidden */
+            transform: translateY(20px); /* Initially moved down */
+            animation: fadeInUp 0.5s forwards; /* Animation */
+        }
+    
+        p:hover {
+            background-color: #e0e0e0; /* Lighter background on hover */
+        }
+    
+        /* Keyframes for the fadeInUp animation */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1; /* Fully visible */
+                transform: translateY(0); /* Move to original position */
+            }
+        }
+    
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            #btn,#btn-remove {
+                padding: 10px 20px; /* Smaller padding */
+                font-size: 14px; /* Smaller font size */
+            }
+    
+            p {
+                font-size: 16px; /* Smaller font size */
+                padding: 8px; /* Smaller padding */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Fetching Data</h1>
+    <button id="btn" >Fetch Data</button>
+    <button id="btn-remove" >Remove Data</button>
+    <div id="data"></div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
